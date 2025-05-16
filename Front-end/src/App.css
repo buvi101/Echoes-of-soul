@@ -1,0 +1,185 @@
+body {
+    font-family: 'Lora', serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden; 
+  }
+  
+  .container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .bg-video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+    .typing-text {
+      font-size: 2rem;
+      font-weight: bold;
+      font-style: italic;
+      font-family: 'Lora', serif;
+      color: white;
+      text-shadow: 3px 3px 15px rgba(255, 255, 255, 0.5);
+      border-right: 3px solid white; /* Typing cursor effect */
+      overflow: hidden;
+      display: inline-block;
+      width: 0;
+    animation: typingEffect 6s steps(40, end) 6s forwards, blinkCursor 0.8s infinite;
+  
+  }
+  
+  .greetings {
+    font-size: 2.5rem;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 2px;
+    color: white;
+    text-shadow: 2px 2px 20px rgba(255, 255, 255, 0.7);
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 1.5s ease-in-out 0.1s forwards;
+  }
+  
+  /* Cursor blinking effect */
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 42%;
+    position: absolute;
+  }
+  
+  
+  /* FADE-IN ANIMATION FOR GREETINGS */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* TYPING EFFECT */
+  @keyframes typingEffect {
+    from {
+      width: 0;
+    }
+    to {
+      width: 87%;
+    }
+  }
+  
+  /* BLINKING CURSOR */
+  @keyframes blinkCursor {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  
+  /* Button Styling */
+  #explore-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 15px rgba(255, 65, 108, 0.4);
+    outline: none;
+    opacity: 0;
+    transform: translateY(15px) scale(0.9);
+    animation: fadeInUp 0.8s ease-in-out forwards;
+  }
+  
+  /* Button Hover Effect */
+  #explore-btn:hover {
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 6px 20px rgba(255, 65, 108, 0.6);
+  }
+  
+  /* Button Click Effect */
+  #explore-btn:active {
+    transform: scale(0.95);
+    box-shadow: 0 3px 10px rgba(255, 65, 108, 0.5);
+  }
+  
+  /* Fade-in Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(15px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  @media (max-width: 425px) {
+  .text-container {
+    width: 90%;
+    padding: 0 10px;
+  }
+
+  .typing-text {
+    font-size: 1.2rem;
+    width: 100%;
+    animation: typingEffectMobile 6s steps(40, end) 6s forwards, blinkCursor 0.8s infinite;
+  }
+
+  .greetings {
+    font-size: 1.6rem;
+    text-shadow: 1px 1px 10px rgba(255, 255, 255, 0.7);
+  }
+
+  #explore-btn {
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 16px;
+  }
+}
+
+/* Typing effect adjusted for mobile width */
+@keyframes typingEffectMobile {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

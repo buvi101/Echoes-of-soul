@@ -1,0 +1,188 @@
+.mypoems-box{
+    max-height: 100vh;
+    overflow-y: auto;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+    padding-top: 50px;
+    font-family: 'Lora', serif;
+    scroll-behavior: smooth;
+}
+
+.my-poems-container {
+    width: 600px;
+    margin: 40px auto;
+    margin-bottom: 294px;
+    padding: 20px;
+    font-family: "Segoe UI", sans-serif;
+    color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+  
+  
+  .poem-card {
+    background: #2a2a2a;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .poem-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .poem-card h3 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .poem-card p {
+    font-size: 16px;
+    color: #dddddd;
+    margin-bottom: 10px;
+    white-space: pre-wrap;
+  }
+  
+  .poem-actions,
+  .btn-group {
+    /* display: flex; */
+    gap: 10px;
+    margin-top: 1rem;
+  }
+  
+  .poem-actions button,
+  .edit-btn,
+  .delete-btn,
+  .save-btn,
+  .cancel-btn {
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+
+  .delete-btn,.cancel-btn{
+    margin-left: 10px;
+  }
+  
+  .poem-actions button:hover,
+  .edit-btn:hover,
+  .delete-btn:hover,
+  .save-btn:hover,
+  .cancel-btn:hover {
+    opacity: 0.9;
+  }
+  
+  .edit-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .save-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .cancel-btn {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .edit-title, .edit-content{
+    margin-top: 12px;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background: #1e1e1e;
+    color: #f0f0f0;
+    box-sizing: border-box;
+    resize: vertical;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  input[type="text"]:focus,
+  textarea:focus {
+    border-color: #f1c40f;
+    outline: none;
+  }
+  
+  .edit-mode input,
+  .edit-mode textarea {
+    background: #2b2b2b;
+    border: 1px solid #555;
+    color: #f0f0f0;
+  }
+  
+  .no-poems-message{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    flex-direction: column;
+    height: 100px;
+    padding: 20px;
+    margin-left: 100px;
+    margin-top: 200px;
+  }
+
+  .sad-face{
+    height: 50px;
+  }
+
+  @media (max-width: 768px) {
+  .my-poems-container {
+    width: 90%; /* Full width with some padding */
+    margin: 20px auto 150px auto; /* Reduce margin */
+    padding: 15px;
+  }
+
+  .no-poems-message {
+    width: 90%;
+    margin: 100px auto 0 auto;
+    height: auto;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .poem-card h3 {
+    font-size: 18px;
+  }
+
+  .poem-card p {
+    font-size: 15px;
+  }
+
+  .poem-actions button,
+  .edit-btn,
+  .delete-btn,
+  .save-btn,
+  .cancel-btn {
+    font-size: 13px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .edit-title,
+  .edit-content {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .sad-face {
+    height: 40px;
+  }
+}

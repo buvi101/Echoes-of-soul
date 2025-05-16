@@ -1,0 +1,76 @@
+.poem-upload-form{
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #2a2a2a; 
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    color: #f0f0f0;
+  }
+  
+  .poem-upload-form input,
+  .poem-upload-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background-color: #1f1f1f;
+    border: 1px solid #333;
+    color: #f0f0f0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.2s, background-color 0.2s;
+  }
+  
+  .poem-upload-form input::placeholder,
+  .poem-upload-form textarea::placeholder {
+    color: #aaa;
+  }
+  
+  .poem-upload-form input:focus,
+  .poem-upload-form textarea:focus {
+    outline: none;
+    border-color: #f1c40f;
+    background-color: #262626;
+  }
+  
+  .poem-upload-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .poem-upload-form button {
+    background-color: #ffffff;
+    color: #2b2b2b;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out, transform 0.2s;
+  }
+  
+  .poem-upload-form button:hover {
+    background-color: #f1c40f;
+    transform: scale(1.02);
+  }
+  
+  @media (max-width: 425px) {
+  .poem-upload-form {
+    margin: 1rem;
+    padding: 1.2rem;
+    border-radius: 12px;
+  }
+
+  .poem-upload-form input,
+  .poem-upload-form textarea {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .poem-upload-form button {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+}
