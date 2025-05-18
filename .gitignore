@@ -1,0 +1,20 @@
+# Ignore Python virtual environment
+chatbot-env/
+
+# Node modules (if using React or Vite)
+node_modules/
+
+# Ignore build files
+dist/
+build/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Environment files
+.env
+
+# System files
+.DS_Store
+Thumbs.db
