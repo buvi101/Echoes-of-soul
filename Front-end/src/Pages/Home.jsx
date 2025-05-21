@@ -22,7 +22,7 @@ function Home() {
   // Fetch poems from the server
   const fetchPoems = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/poems");
+      const res = await axios.get("https://echoes-of-soul-back-end.onrender.com/api/poems");
       setPoems(res.data);
     } catch (err) {
       console.error("Failed to fetch poems", err);
