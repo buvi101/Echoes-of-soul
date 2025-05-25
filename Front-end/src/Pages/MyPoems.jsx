@@ -17,7 +17,7 @@ const MyPoems = () => {
   useEffect(() => {
     if (isAuthenticated) {
       axios
-        .get(`http://localhost:5000/api/poems`)
+        .get(`https://echoes-of-soul-back-end.onrender.com/api/poems`)
         .then((res) => {
           const userPoems = res.data.filter(
             (poem) => poem.author === user.name || poem.author === user.email
@@ -31,7 +31,7 @@ const MyPoems = () => {
   const handleDelete = (id) => {
     if (window.confirm("Are you sure you want to delete this poem?")) {
       axios
-        .delete(`http://localhost:5000/api/poems/${id}`)
+        .delete(`https://echoes-of-soul-back-end.onrender.com/api/poems/${id}`)
         .then(() => {
           setPoems((prev) => prev.filter((poem) => poem._id !== id));
         })
@@ -53,7 +53,7 @@ const MyPoems = () => {
 
   const handleSave = (id) => {
     axios
-      .put(`http://localhost:5000/api/poems/${id}`, {
+      .put(`https://echoes-of-soul-back-end.onrender.com/api/poems/${id}`, {
         title: editedTitle,
         content: editedContent,
       })
