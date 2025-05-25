@@ -12,7 +12,7 @@ const PoemUpload = ({ poems, setPoems }) => {
     if (!isAuthenticated) return;
 
     try {
-      const res = await axios.post("http://localhost:5000/api/poems", {
+      const res = await axios.post("https://echoes-of-soul-back-end.onrender.com/api/poems", {
         title,
         content,
         author: user.email,

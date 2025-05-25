@@ -15,7 +15,7 @@ const PoemList = ({ poems, setPoems }) => {
     }
 
     try {
-      const response = await axios.put(`http://localhost:5000/api/poems/like/${poemId}`, {
+      const response = await axios.put(`https://echoes-of-soul-back-end.onrender.com/api/poems/like/${poemId}`, {
         userEmail: user.email,
       });
 
@@ -51,7 +51,7 @@ const PoemList = ({ poems, setPoems }) => {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/poems/comment/${poemId}`,
+        `https://echoes-of-soul-back-end.onrender.com/api/poems/comment/${poemId}`,
         {
           userEmail: user.email,
           text,
