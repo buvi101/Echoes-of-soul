@@ -57,7 +57,7 @@ function Home() {
               For those who feel the silence."
             </p>
           </div>
-          <Chatbot /> 
+          
         </section>
 
         {isAuthenticated && (
