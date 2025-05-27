@@ -10,8 +10,7 @@ import './Navbar.css';
 import './Home.css';
 import './PoemUpload.css';
 import './PoemList.css';
-import Chatbot from '../Components/Chatbot';
-import './Chatbot.css';
+
 
 function Home() {
   const { isAuthenticated, user } = useAuth0();
