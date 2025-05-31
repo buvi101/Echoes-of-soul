@@ -14,13 +14,6 @@ function About() {
       
       <div className="about-container">
         <SplineViewer />
-        <section id='bot-sec'>
-          <h1>Meet Echo – Your Personal Poetry Companion</h1>
-          <p>At Echoes of Soul, every word holds emotion, and every poem tells a story. To make your experience even more personal, we've introduced Echo — an intelligent chatbot designed to connect with your poetic Journey.</p>
-          <p>Whether you're looking for help navigating the site, discovering heartfelt poems, translating verses into your native language, or simply sharing your feelings, Echo is here for you. Think of it as your digital confidant — always listening, always responding, and always ready to inspire.</p>
-         
-          
-        </section>
 
         <section id='mission-sec'>
           <h1>Mission</h1>
